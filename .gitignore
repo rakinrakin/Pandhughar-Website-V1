@@ -1,0 +1,16 @@
+# design mockups stay local
+mockups/
+
+# local tooling
+.claude/
+.mcp.json
+
+# reference material, not part of the site
+*.pdf
+gemini_generated_video_*.mp4
+image 1.png
+
+# OS / editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,12 @@
+# Static site: no build step, publish the repository root as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Heavy files (video, 3D app and models, icons, logos) rarely change: let browsers keep them for an
+# hour and reuse them for a day while quietly re-checking, so repeat visits don't re-download them.
+# Pages, CSS and JS keep Netlify's default (always re-checked) so updates show up immediately.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
